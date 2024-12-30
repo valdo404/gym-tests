@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "gym-tests"
+version = "0.1.0"
+description = ""
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+gymnasium = "^1.0.0"
+notebook = "^7.3.2"
+tensorboard-plugin-wit = "^1.8.1"
+optuna = "^4.1.0"
+scikit-learn = "^1.6.0"
+ipywidgets = "^8.1.5"
+jupyterlab-widgets = "^3.0.13"
+tensorflow = "==2.17.1"
+tensorflow-metal = "*"
+
+tensorflow-io-gcs-filesystem = { version = "<=0.37.1", optional = true }
+pygame = "^2.6.1"
+
+[tool.poetry.group.macos.dependencies]
+tensorflow-metal = "*"
+tensorflow-io-gcs-filesystem = { version = "*", optional = true }
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
